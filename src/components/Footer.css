@@ -1,0 +1,56 @@
+/* components/Footer.css */
+.footer {
+    background-color: #222; /* Dark background for the footer */
+    
+    color: white;
+    text-align: center;
+    max-height: 100px;
+  }
+  
+  .footer-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    height:40px;
+    padding:5px;
+    margin-bottom: 0px;
+    background-color: #8a2be2;
+    text-align: center; /* Center-align the text of the links */
+  }
+  
+  .footer-links a {
+    color:white; /* Light blue for the links */
+    text-decoration: none;
+    font-size: 18px;
+    border-radius: 10px;
+    padding: 5px;
+  }
+  
+  .footer-links a:hover {
+    background-color: rgb(62, 16, 102);
+    border-radius: 10px;
+  }
+  
+  .footer-image {
+    margin-top: 0px;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+  }
+  
+  .footer-image img {
+    width: 70px;
+    height: auto;
+  }
+  
+  /* Prevent links from stacking on small screens */
+  @media (max-width: 768px) {
+    .footer-links {
+      flex-direction: row; /* Keep links in a row even on smaller screens */
+      gap: 20px; /* Reduce the gap between the links */
+    }
+  }
+  

@@ -1,0 +1,124 @@
+/* ComicSlider Container */
+.comic-slider {
+  width: 660px; /* 15cm */
+  height: 260px; /* 6cm */
+  max-width: 100%;
+  max-height: 100%;
+  overflow: hidden;
+  position: relative;
+  z-index: 5;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* Blurred glass effect */
+.comic-slide {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+  width: 100%;
+  padding: 10px;
+  backdrop-filter: blur(10px) brightness(0.9);
+  background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent dark overlay */
+}
+
+/* Comic Info - Left Side */
+.comic-info {
+  height: 100% !important;
+  width: 70% !important;
+  padding: 5px;
+  text-align: left;
+  color: white;
+}
+
+.summary {
+  font-size: 15px;
+  font-weight: bolder;
+  margin-bottom: 0px;
+  color: white;
+}
+
+.comic-title1 {
+  font-size: 30px;
+  margin-bottom: 5px;
+  color: white;
+  font-weight: lighter !important;
+  font-family: cursive;
+}
+
+.comic-title1 a {
+  color:white;
+  text-decoration: none;
+}
+
+.comic-title1 a:hover {
+  color: rgb(127, 49, 201); /* Optional: Change color when hovered */
+}
+
+.comic-description {
+  font-size: 14px;
+  color: #ddd;
+  display: -webkit-box;
+  -webkit-line-clamp: 5;
+  line-clamp: 5;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Comic Cover - Right Side */
+.comic-slide img {
+  width: 25%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+/* Navigation Dots */
+.comic-navigation {
+  display: flex;
+  z-index: 6;
+  justify-content: center;
+  align-items: center;
+  margin-top: -10px;
+}
+
+.comic-dot {
+  width: 10px;
+  height: 10px;
+  margin: 0 5px;
+  border-radius: 100%;
+  background-color: gray;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s ease-in-out;
+}
+
+.comic-dot.active {
+  background-color: purple;
+}
+
+@media (max-width: 768px) {
+  .comic-slider {
+    width: 700px; /* 15cm */
+    height: 260px; /* 6cm */
+    max-width: 100%;
+    max-height: 100%;
+    overflow: hidden;
+    position: relative;
+    z-index: 5;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+}

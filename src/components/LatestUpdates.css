@@ -1,0 +1,92 @@
+.latest-updates {
+  margin-top: 10px;
+  max-width:850px;
+  width: 100%; /* Ensure it takes the full width of the container */
+}
+
+.latest-updates h2 {
+  color: white;
+  font-size: 15px;
+  padding: 10px;
+  background-color: rgb(26, 26, 27);
+  border-bottom: solid rgb(154, 143, 143) 1pt;
+}
+
+.updates-grid {
+  display: grid;
+  background-color: rgb(29, 31, 31);
+  grid-template-columns: repeat(2, 1fr); /* 2 columns by default */
+  width: 100%; /* Ensure the grid takes up the full width */
+}
+
+.comic-item {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  padding: 10px;
+  align-items: flex-start;
+  width: 100%; /* Allow the item to take full width within the grid column */
+  box-sizing: border-box; /* To account for padding and border in the item width */
+  border-bottom: 2px solid #444; /* Adding a subtle line between rows */
+}
+
+.comic-cover {
+  width: 120px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.comic-details {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  max-height: 100px;
+}
+
+.comic-title {
+  color: white;
+  font-size: 16px;
+  margin-bottom: 2px;
+  font-weight: bolder;
+}
+
+.comic-title a{
+  text-decoration: none;
+  color: white;
+}
+
+.comic-title a:hover{
+  color: rgb(127, 49, 201);
+}
+
+.chapters {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+}
+
+.chapter-link {
+  color: #9ca4a7; /* Light blue for links */
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.chapter-link:hover {
+  color :rgb(127, 49, 201);
+}
+
+@media (max-width: 768px) {
+  .updates-grid {
+      grid-template-columns: 1fr; /* Switch to 1 column on smaller screens */
+  }
+
+  .comic-item {
+      width: 100%; /* Each item takes up the full width of the container */
+  }
+
+  .comic-cover {
+      width: 100%; /* Make cover image take full width in single column */
+      height: auto; /* Adjust height to maintain aspect ratio */
+  }
+}

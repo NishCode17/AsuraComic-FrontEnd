@@ -1,0 +1,75 @@
+/* Main container that holds both the left and right sections */
+.main-container {
+    display: flex;
+    gap: 8px; /* Gap between the left and right container */
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.922);
+    width: 100%;
+    justify-content: space-between; /* Keep space between left and right sections */
+    align-items: flex-start;
+}
+
+/* Left container */
+.left-container {
+    flex: 2; /* Left container takes up 2 parts, making it bigger */
+    display: flex;
+    flex-direction: column;
+    width: 70%; /* Set width to 70% of the page */
+    justify-content: flex-end; /* Right-align the content */
+    align-items: flex-end; /* Right-align the items */
+}
+
+/* Right container */
+.right-container {
+    flex: 1; /* Right container takes up 1 part */
+    width: 30%; /* Set width to 30% of the page */
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    justify-content: flex-start; /* Left-align the content */
+    align-items: flex-start; /* Left-align the items */
+}
+
+/* Row for Slider and Comic of the Month in the left container */
+.left-row {
+    display: flex;
+    gap: 5px;
+    width: 100%; /* Ensures the left-row takes full width of the container */
+    justify-content: flex-end; /* Right-align Slider and COTM */
+}
+
+.popular-today {
+    display: flex;
+    width: 100%; /* Ensures it takes the full width of the container */
+    justify-content: flex-end;
+}
+
+.latest-update{
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .main-container {
+        flex-direction: column; /* Stack both sections vertically */
+        align-items: center; /* Center align */
+        gap: 0; /* Remove gap between flex items */
+    }
+
+    /* On small screens, both containers should take full width */
+    .left-container, .right-container {
+        width: 100%;
+    }
+
+    .left-container {
+        order: 1; /* Left container remains first */
+    }
+
+    .right-container {
+        order: 2; /* Right container moves below */
+        margin-top: 20px; /* Add space between left and right */
+    }
+}
